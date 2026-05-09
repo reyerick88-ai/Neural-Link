@@ -1,18 +1,18 @@
-## OpenClaw Vision
+## Neural-Link Vision
 
-OpenClaw is the AI that actually does things.
-It runs on your devices, in your channels, with your rules.
+Neural-Link es la distribución enfocada en **clínicas dentales en México** (SaaS B2B) sobre el núcleo técnico OpenClaw.
+El software sigue siendo el asistente multi-canal que ejecuta tareas reales en tus dispositivos y canales, con tus reglas.
 
 This document explains the current state and direction of the project.
 We are still early, so iteration is fast.
 Project overview and developer docs: [`README.md`](README.md)
 Contribution guide: [`CONTRIBUTING.md`](CONTRIBUTING.md)
 
-OpenClaw started as a personal playground to learn AI and build something genuinely useful:
+Neural-Link/OpenClaw started as a personal playground to learn AI and build something genuinely useful:
 an assistant that can run real tasks on a real computer.
 It evolved through several names and shells: Warelay -> Clawdbot -> Moltbot -> OpenClaw.
 
-The goal: a personal assistant that is easy to use, supports a wide range of platforms, and respects privacy and security.
+The goal: un **agente de IA local** útil para equipos clínicos — fácil de operar, amplio en plataformas, y con foco en privacidad y seguridad de datos de paciente.
 
 The current focus is:
 
@@ -40,7 +40,7 @@ Contribution rules:
 
 ## Security
 
-Security in OpenClaw is a deliberate tradeoff: strong defaults without killing capability.
+Security in Neural-Link inherits OpenClaw's posture: a deliberate tradeoff of strong defaults without killing capability.
 The goal is to stay powerful for real work while making risky paths explicit and operator-controlled.
 
 Canonical security policy and reporting:
@@ -51,7 +51,7 @@ We prioritize secure defaults, but also expose clear knobs for trusted high-powe
 
 ## Plugins & Memory
 
-OpenClaw has an extensive plugin API.
+Neural-Link tiene la misma API de plugins extensa que OpenClaw.
 Core stays lean; optional capability should usually ship as plugins.
 We are generally slimming down core while expanding what plugins can do.
 If a useful feature cannot be built as a plugin yet, we welcome PRs and design discussions that extend the plugin API instead of adding one-off core behavior.
@@ -70,7 +70,7 @@ If you build a plugin, host and maintain it in your own repository.
 The bar for adding optional plugins to core is intentionally high.
 Plugin docs: [`docs/tools/plugin.md`](docs/tools/plugin.md)
 Plugin discovery, official publisher status, provenance, and security review live in [ClawHub](https://clawhub.ai/).
-OpenClaw docs should document core extension points; plugin promotion belongs in ClawHub, preferably under vetted org publishers for official plugins.
+Neural-Link docs (derived from OpenClaw) document core extension points; plugin promotion belongs in ClawHub, preferably under vetted org publishers for official plugins.
 
 Memory is a special plugin slot where only one memory plugin can be active at a time.
 Today we ship multiple memory options; over time we plan to converge on one recommended default path.
@@ -83,7 +83,7 @@ Official or bundled promotion should require a clear product, security, or maint
 
 ### MCP Support
 
-OpenClaw supports MCP as both a server and a runtime integration surface.
+Neural-Link supports MCP as both a server and a runtime integration surface.
 MCP details live in [`docs/cli/mcp.md`](docs/cli/mcp.md).
 
 The project goal is pragmatic MCP support without duplicating existing agent,
@@ -91,7 +91,7 @@ tool, ACPX, plugin, or ClawHub paths.
 
 ### Setup
 
-OpenClaw is currently terminal-first by design.
+Neural-Link is currently terminal-first by design.
 This keeps setup explicit: users see docs, auth, permissions, and security posture up front.
 
 Long term, we want easier onboarding flows as hardening matures.
@@ -99,8 +99,8 @@ We do not want convenience wrappers that hide critical security decisions from u
 
 ### Why TypeScript?
 
-OpenClaw is primarily an orchestration system: prompts, tools, protocols, and integrations.
-TypeScript was chosen to keep OpenClaw hackable by default.
+Neural-Link is primarily an orchestration system: prompts, tools, protocols, and integrations.
+TypeScript was chosen to keep the stack hackable by default.
 It is widely known, fast to iterate in, and easy to read, modify, and extend.
 
 ## What We Will Not Merge (For Now)

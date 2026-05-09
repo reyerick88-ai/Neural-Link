@@ -1,5 +1,6 @@
 {
   "name": "openclaw-control-ui",
+  "description": "Panel de Neural-Link para clínicas dentales — Control UI basada en OpenClaw (texto visible únicamente; paquete y build sin renombrar).",
   "private": true,
   "type": "module",
   "scripts": {

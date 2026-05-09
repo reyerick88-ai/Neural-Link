@@ -1,8 +1,16 @@
 {
   "name": "openclaw",
   "version": "2026.5.6",
-  "description": "Multi-channel AI gateway with extensible messaging integrations",
-  "keywords": [],
+  "description": "Neural-Link — agente de IA local para clínicas dentales (México). Plataforma SaaS B2B basada en el gateway multi-canal OpenClaw; el CLI público sigue siendo \"openclaw\".",
+  "keywords": [
+    "neural-link",
+    "dental",
+    "clinicas",
+    "mexico",
+    "saas",
+    "openclaw-fork",
+    "ia-local"
+  ],
   "homepage": "https://github.com/openclaw/openclaw#readme",
   "bugs": {
     "url": "https://github.com/openclaw/openclaw/issues"

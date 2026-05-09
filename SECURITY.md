@@ -1,12 +1,12 @@
 # Security Policy
 
-If you believe you've found a security issue in OpenClaw, report it privately first.
+If you believe you've found a security issue in Neural-Link (this distribution based on OpenClaw), report it privately first — and consider whether the flaw belongs upstream in OpenClaw.
 
-This policy does two things: it gives researchers a clear disclosure path, and it spells out the trust model maintainers use when triaging reports. OpenClaw is local-first agent infrastructure for trusted operators; it is not designed as a shared multi-tenant boundary between adversarial users on one gateway.
+This policy does two things: it gives researchers a clear disclosure path, and it spells out the trust model maintainers use when triaging reports. Neural-Link inherits OpenClaw's model: local-first agent infrastructure for trusted operators; it is not designed as a shared multi-tenant boundary between adversarial users on one gateway.
 
 The fastest useful reports show a current, reproducible boundary bypass with demonstrated impact. Scanner output, prompt-injection-only chains, or reports that rely on hostile users sharing one trusted gateway are usually not security vulnerabilities under this model.
 
-Security work is shared across a number of OpenClaw maintainers, including engineers and security researchers from organizations such as NVIDIA and Tencent. See the [maintainer list](CONTRIBUTING.md#maintainers).
+Security work is shared across a number of OpenClaw ecosystem maintainers, including engineers and security researchers from organizations such as NVIDIA and Tencent. See the [maintainer list](CONTRIBUTING.md#maintainers).
 
 ## Report a Security Issue
 
@@ -23,12 +23,12 @@ For issues that don't fit a specific repo, or if you're unsure, email **[securit
 
 For OpenClaw core issues, submit through a private [GitHub Security Advisory](https://github.com/openclaw/openclaw/security/advisories/new). Do not open a public issue or PR that discloses an unpatched vulnerability, exploit path, secret, or security-sensitive proof of concept.
 
-Maintainers may close, hide, delete, or otherwise take down public issues and PRs that disclose vulnerabilities or active security issues. We will redirect those reports through the private disclosure process so the issue can be triaged and fixed without giving attackers a public playbook.
+Maintainers may close, hide, delete, or otherwise take down public issues and PRs that disclose vulnerabilities or active security issues. Reports are redirected through private disclosure workflows so fixes can ship without advertising exploit paths.
 
-For full reporting instructions see our [Trust page](https://trust.openclaw.ai).
+For full reporting instructions see the upstream [Trust page](https://trust.openclaw.ai).
 For maintainer response workflow, see the [incident response plan](docs/security/incident-response.md).
 
-OpenClaw does not currently run a paid bug bounty program. Please still disclose responsibly so we can fix real issues quickly. The best way to help the project right now is to send high-signal reports and, when practical, focused PRs.
+The OpenClaw project does not currently run a paid bug bounty program for the core distribution. Please still disclose responsibly so we can fix real issues quickly. The best way to help the project right now is to send high-signal reports and, when practical, focused PRs.
 
 ### What We Need
 

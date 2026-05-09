@@ -1,9 +1,9 @@
-# 🦞 OpenClaw — Personal AI Assistant
+# 🦞 Neural-Link — Agente de IA para clínicas dentales (México)
 
 <p align="center">
     <picture>
         <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text-dark.svg">
-        <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.svg" alt="OpenClaw" width="500">
+        <img src="https://raw.githubusercontent.com/openclaw/openclaw/main/docs/assets/openclaw-logo-text.svg" alt="Neural-Link (basado en OpenClaw)" width="500">
     </picture>
 </p>
 
@@ -18,10 +18,10 @@
   <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="MIT License"></a>
 </p>
 
-**OpenClaw** is a _personal AI assistant_ you run on your own devices.
-It answers you on the channels you already use. It can speak and listen on macOS/iOS/Android, and can render a live Canvas you control. The Gateway is just the control plane — the product is the assistant.
+**Neural-Link** es una plataforma SaaS B2B enfocada en **clínicas dentales en México**: un _agente de IA local_ que corres en tu propia infraestructura para operación, mensajería y automatización de tu consultorio, sin renunciar al control de los datos.
+Respondes y orquestas desde los canales que ya usáis; puede hablar y escuchar en macOS/iOS/Android, y renderizar un Canvas en vivo. El Gateway es el plano de control técnico — el producto visible es el agente para tu clínica.
 
-If you want a personal, single-user assistant that feels local, fast, and always-on, this is it.
+Si buscas un asistente local, rápido y siempre disponible para equipos clínicos que hablan con pacientes y sistemas internos, Neural-Link es el marco (derivado de OpenClaw).
 
 Supported channels include: WhatsApp, Telegram, Slack, Discord, Google Chat, Signal, iMessage, IRC, Microsoft Teams, Matrix, Feishu, LINE, Mattermost, Nextcloud Talk, Nostr, Synology Chat, Tlon, Twitch, Zalo, Zalo Personal, WeChat, QQ, WebChat.
 
@@ -30,7 +30,7 @@ Supported channels include: WhatsApp, Telegram, Slack, Discord, Google Chat, Sig
 New install? Start here: [Getting started](https://docs.openclaw.ai/start/getting-started)
 
 Preferred setup: run `openclaw onboard` in your terminal.
-OpenClaw Onboard guides you step by step through setting up the gateway, workspace, channels, and skills. It is the recommended CLI setup path and works on **macOS, Linux, and Windows (via WSL2; strongly recommended)**.
+Neural-Link Onboard guía el alta del gateway, workspace, canales y skills. Es la ruta CLI recomendada y funciona en **macOS, Linux y Windows (vía WSL2; muy recomendado)**.
 Works with npm, pnpm, or bun.
 
 ## Sponsors
@@ -105,7 +105,7 @@ npm install -g openclaw@latest
 openclaw onboard --install-daemon
 ```
 
-OpenClaw Onboard installs the Gateway daemon (launchd/systemd user service) so it stays running.
+Neural-Link Onboard installs the Gateway daemon (launchd/systemd user service) so it stays running.
 
 ## Quick start (TL;DR)
 
@@ -119,7 +119,7 @@ openclaw onboard --install-daemon
 openclaw gateway --port 18789 --verbose
 
 # Send a message
-openclaw message send --target +1234567890 --message "Hello from OpenClaw"
+openclaw message send --target +1234567890 --message "Hello from Neural-Link"
 
 # Talk to the assistant (optionally deliver back to any connected channel: WhatsApp/Telegram/Slack/Discord/Google Chat/Signal/iMessage/IRC/Microsoft Teams/Matrix/Feishu/LINE/Mattermost/Nextcloud Talk/Nostr/Synology Chat/Tlon/Twitch/Zalo/Zalo Personal/WeChat/QQ/WebChat)
 openclaw agent --message "Ship checklist" --thinking high
@@ -131,7 +131,7 @@ Models config + CLI: [Models](https://docs.openclaw.ai/concepts/models). Auth pr
 
 ## Security defaults (DM access)
 
-OpenClaw connects to real messaging surfaces. Treat inbound DMs as **untrusted input**.
+Neural-Link connects to real messaging surfaces. Treat inbound DMs as **untrusted input**.
 
 Full security guide: [Security](https://docs.openclaw.ai/gateway/security)
 
@@ -185,7 +185,7 @@ The Gateway alone delivers a great experience. All apps are optional and add ext
 
 If you plan to build/run companion apps, follow the platform runbooks below.
 
-### macOS (OpenClaw.app) (optional)
+### macOS desktop companion (optional)
 
 - Menu bar control for the Gateway and health.
 - Voice Wake + push-to-talk overlay.
@@ -223,7 +223,7 @@ cd openclaw
 
 pnpm install
 
-# First run only (or after resetting local OpenClaw config/workspace)
+# First run only (or after resetting local Gateway config/workspace)
 pnpm openclaw setup
 
 # Optional: prebuild Control UI before first startup
@@ -279,7 +279,7 @@ Minimal `~/.openclaw/openclaw.json` (model + defaults):
 
 ## Molty
 
-OpenClaw was built for **Molty**, a space lobster AI assistant. 🦞
+Neural-Link was built for **Molty**, a space lobster AI assistant. 🦞 (Lore heredada del upstream OpenClaw.)
 by Peter Steinberger and the community.
 
 - [openclaw.ai](https://openclaw.ai)

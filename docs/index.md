@@ -1,22 +1,22 @@
 ---
-summary: "OpenClaw is a multi-channel gateway for AI agents that runs on any OS."
+summary: "Neural-Link — gateway multi-canal para agentes de IA (basado en OpenClaw), orientado a clínicas dentales en México."
 read_when:
-  - Introducing OpenClaw to newcomers
-title: "OpenClaw"
+  - Introducing Neural-Link to newcomers
+title: "Neural-Link"
 ---
 
-# OpenClaw 🦞
+# Neural-Link 🦞
 
 <p align="center">
     <img
         src="/assets/openclaw-logo-text-dark.png"
-        alt="OpenClaw"
+        alt="Neural-Link"
         width="500"
         class="dark:hidden"
     />
     <img
         src="/assets/openclaw-logo-text.png"
-        alt="OpenClaw"
+        alt="Neural-Link"
         width="500"
         class="hidden dark:block"
     />
@@ -25,13 +25,13 @@ title: "OpenClaw"
 > _"EXFOLIATE! EXFOLIATE!"_ — A space lobster, probably
 
 <p align="center">
-  <strong>Any OS gateway for AI agents across Discord, Google Chat, iMessage, Matrix, Microsoft Teams, Signal, Slack, Telegram, WhatsApp, Zalo, and more.</strong><br />
+  <strong>Plataforma self-hosted para equipos clínicos en México: mismo gateway multi-canal que OpenClaw, con enfoque SaaS B2B para consultorios dentales.</strong><br />
   Send a message, get an agent response from your pocket. Run one Gateway across built-in channels, bundled channel plugins, WebChat, and mobile nodes.
 </p>
 
 <Columns>
   <Card title="Get Started" href="/start/getting-started" icon="rocket">
-    Install OpenClaw and bring up the Gateway in minutes.
+    Install the `openclaw` CLI distribution and bring up the Gateway in minutes.
   </Card>
   <Card title="Run Onboarding" href="/start/wizard" icon="sparkles">
     Guided setup with `openclaw onboard` and pairing flows.
@@ -41,18 +41,18 @@ title: "OpenClaw"
   </Card>
 </Columns>
 
-## What is OpenClaw?
+## What is Neural-Link?
 
-OpenClaw is a **self-hosted gateway** that connects your favorite chat apps and channel surfaces — built-in channels plus bundled or external channel plugins such as Discord, Google Chat, iMessage, Matrix, Microsoft Teams, Signal, Slack, Telegram, WhatsApp, Zalo, and more — to AI coding agents like Pi. You run a single Gateway process on your own machine (or a server), and it becomes the bridge between your messaging apps and an always-available AI assistant.
+Neural-Link is a **self-hosted gateway distribution** aimed at dental clinic teams in Mexico (SaaS B2B framing). Under the hood it is the same **OpenClaw** multi-channel gateway: your chat surfaces connect—built-in channels plus bundled or external channel plugins—to AI agents with tool use and sessions.
 
-**Who is it for?** Developers and power users who want a personal AI assistant they can message from anywhere — without giving up control of their data or relying on a hosted service.
+**¿Para quién es?** Clínicas y grupos dentales que quieren un **agente de IA local** para mensajería, coordinación y flujos clínicos, sin sacrificar soberanía de datos frente a un SaaS cerrado ajeno.
 
 **What makes it different?**
 
-- **Self-hosted**: runs on your hardware, your rules
-- **Multi-channel**: one Gateway serves built-in channels plus bundled or external channel plugins simultaneously
-- **Agent-native**: built for coding agents with tool use, sessions, memory, and multi-agent routing
-- **Open source**: MIT licensed, community-driven
+- **Self-hosted**: runs on your hardware, your rules — ideal para cumplimiento y datos sensibles en MX
+- **Multi-channel**: un solo Gateway sirve todos los plugins de canal que necesites simultáneamente
+- **Agent-native**: herramientas, sesiones, memoria y enrutado multi‑agente
+- **Upstream alignment**: mismo núcleo OpenClaw MIT; el CLI público sigue llamándose `openclaw`.
 
 **What do you need?** Node 24 (recommended), or Node 22 LTS (`22.16+`) for compatibility, an API key from your chosen provider, and 5 minutes. For best quality and security, use the strongest latest-generation model available.
 
@@ -96,7 +96,7 @@ The Gateway is the single source of truth for sessions, routing, and channel con
 ## Quick start
 
 <Steps>
-  <Step title="Install OpenClaw">
+  <Step title="Install the CLI (`openclaw` package)">
     ```bash
     npm install -g openclaw@latest
     ```
@@ -128,14 +128,14 @@ Open the browser Control UI after the Gateway starts.
 - Remote access: [Web surfaces](/web) and [Tailscale](/gateway/tailscale)
 
 <p align="center">
-  <img src="/whatsapp-openclaw.jpg" alt="OpenClaw" width="420" />
+  <img src="/whatsapp-openclaw.jpg" alt="Neural-Link chat preview" width="420" />
 </p>
 
 ## Configuration (optional)
 
 Config lives at `~/.openclaw/openclaw.json`.
 
-- If you **do nothing**, OpenClaw uses the bundled Pi binary in RPC mode with per-sender sessions.
+- If you **do nothing**, Neural-Link uses the bundled Pi binary in RPC mode with per-sender sessions.
 - If you want to lock it down, start with `channels.whatsapp.allowFrom` and (for groups) mention rules.
 
 Example:

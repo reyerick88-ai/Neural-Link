@@ -1,12 +1,12 @@
 ---
-summary: "Get OpenClaw installed and run your first chat in minutes."
+summary: "Run Neural-Link's `openclaw` CLI, complete onboarding, and get your first reply in minutes."
 read_when:
   - First time setup from zero
   - You want the fastest path to a working chat
 title: "Getting started"
 ---
 
-Install OpenClaw, run onboarding, and chat with your AI assistant — all in
+Install the `openclaw` package, run onboarding, and chat with your **local dental-clinic AI assistant** — all in
 about 5 minutes. By the end you will have a running Gateway, configured auth,
 and a working chat session.
 
@@ -25,7 +25,7 @@ Need to install Node? See [Node setup](/install/node).
 ## Quick setup
 
 <Steps>
-  <Step title="Install OpenClaw">
+  <Step title="Install the CLI (`openclaw`)">
     <Tabs>
       <Tab title="macOS / Linux">
         ```bash

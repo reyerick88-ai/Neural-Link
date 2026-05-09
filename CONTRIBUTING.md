@@ -1,4 +1,6 @@
-# Contributing to OpenClaw
+# Contributing to Neural-Link
+
+Neural-Link is a downstream distribution aimed at dental clinics in Mexico (SaaS B2B), built on the OpenClaw core. Contribution mechanics still follow the upstream project unless this fork publishes its own governance.
 
 Welcome to the lobster tank! 🦞
 
