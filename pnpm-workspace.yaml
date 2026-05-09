@@ -32,6 +32,7 @@ minimumReleaseAgeExclude:
   - "sqlite-vec"
   - "sqlite-vec-*"
   - "@openclaw/fs-safe"
+  - "@openclaw/lobster"
 
 onlyBuiltDependencies:
   - "@discordjs/opus"
