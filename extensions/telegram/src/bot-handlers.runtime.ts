@@ -35,6 +35,7 @@ import {
   expandTelegramAllowFromWithAccessGroups,
   resolveTelegramDmAllow,
 } from "./access-groups.js";
+import { maybeHandleTelegramQuickAction } from "./quick-actions.js";
 import { resolveTelegramAccount, resolveTelegramMediaRuntimeOptions } from "./accounts.js";
 import { withTelegramApiErrorLogging } from "./api-logging.js";
 import {
@@ -1030,6 +1031,18 @@ export const registerTelegramHandlers = ({
     } = params;
 
     const text = typeof msg.text === "string" ? msg.text : undefined;
+    if (text != null && msg.media_group_id == null) {
+      const quickHandled = await maybeHandleTelegramQuickAction({
+        bot,
+        chatId,
+        messageId: msg.message_id,
+        text,
+        runtime,
+      });
+      if (quickHandled) {
+        return;
+      }
+    }
     const isCommandLike = (text ?? "").trim().startsWith("/");
     if (text && !isCommandLike) {
       const nowMs = Date.now();
