@@ -800,21 +800,31 @@ function nativeHookRelayBridgeDir(): string {
 function ensureNativeHookRelayBridgeDir(): string {
   const bridgeDir = nativeHookRelayBridgeDir();
   mkdirSync(bridgeDir, { recursive: true, mode: 0o700 });
+
   const stats = lstatSync(bridgeDir);
   const expectedUid = typeof process.getuid === "function" ? process.getuid() : undefined;
+
   if (!stats.isDirectory() || stats.isSymbolicLink()) {
     throw new Error("unsafe native hook relay bridge directory");
   }
+
   if (expectedUid !== undefined && stats.uid !== expectedUid) {
     throw new Error("unsafe native hook relay bridge directory owner");
   }
-  if ((stats.mode & 0o077) !== 0) {
+
+  // POSIX permission bits such as 0700 are reliable on Linux/macOS,
+  // but not on Windows. Node's chmodSync on Windows does not enforce
+  // Unix-style owner/group/world permissions the same way, so this
+  // check can falsely fail even for a local user temp directory.
+  if (process.platform !== "win32" && (stats.mode & 0o077) !== 0) {
     chmodSync(bridgeDir, 0o700);
     const repaired = lstatSync(bridgeDir);
+
     if ((repaired.mode & 0o077) !== 0) {
       throw new Error("unsafe native hook relay bridge directory permissions");
     }
   }
+
   return bridgeDir;
 }
 
